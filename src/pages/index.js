@@ -1,9 +1,22 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import Layout from '../components/layout'
+import Title from '../components/title'
+import ArticleList from '../components/article-list'
 
 export default () => (
-    <div>
-        <h1>Hello Gatsby! - Home</h1>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link>
-    </div>
+    <Layout>
+        <Title /*text={data.site.siteMetadata.title}*/ text="Welcome"/>
+        <p>This is me. Here is my site.</p>
+        <ArticleList />
+    </Layout>
 )
+
+/*export const query = graphql `query {
+    site {
+        siteMetadata {
+            title
+        }
+    }
+}`*/
+
+//add "{data}" to the export function
